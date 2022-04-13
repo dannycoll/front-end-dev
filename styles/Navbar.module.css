@@ -1,12 +1,12 @@
 .navbarContainer {
-  background-color: white;
+  background-color: rgb(227, 225, 225);
   border-radius: var(--border-radius);
   width: max-content;
   margin: 0 auto;
-  margin-top: 10rem;
   padding: 0 calc(var(--nav-item-padding) * 1.5);
   position: absolute;
   left: 50%;
+  top: 90%;
   transform: translate(-50%, 0);
 }
 
@@ -71,7 +71,7 @@
 }
 
 .indicator::after {
-  background-color: hsl(100, 100%, 50%);
+  background-color: hsl(177, 70%, 49%);
   width: calc(var(--icon-size) * 2);
   height: calc(var(--icon-size) * 2);
   top: calc(-1 * var(--icon-size));
@@ -90,7 +90,7 @@
   position: absolute;
   width: var(--border-radius);
   height: var(--border-radius);
-  background-color: white;
+  background-color: rgb(227, 225, 225);
   z-index: 1;
   top: calc(-1 * var(--indicator-spacing));
   left: calc(0.2 * var(--indicator-spacing));
@@ -109,7 +109,7 @@
   position: absolute;
   width: var(--border-radius);
   height: var(--border-radius);
-  background-color: white;
+  background-color: rgb(227, 225, 225);
   z-index: 1;
   top: calc(-1 * var(--indicator-spacing));
   left: calc(var(--icon-size) * 2 + -0.2 * var(--indicator-spacing));
