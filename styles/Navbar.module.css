@@ -5,6 +5,9 @@
   margin: 0 auto;
   margin-top: 10rem;
   padding: 0 calc(var(--nav-item-padding) * 1.5);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .list {
@@ -56,15 +59,13 @@
 
 .indicator {
   position: absolute;
-  left: calc(
-    var(--position) * (var(--icon-size) + var(--nav-item-padding) * 2)
-  );
+  left: calc(var(--position) * (var(--icon-size) + var(--nav-item-padding) * 2));
   transition: 250ms ease-in-out;
 }
 
 .indicator::after,
 .indicator::before {
-  content: "";
+  content: '';
   position: absolute;
   border-radius: 100%;
 }
@@ -84,7 +85,7 @@
 }
 
 .corners::before {
-  content: "";
+  content: '';
   box-sizing: content-box;
   position: absolute;
   width: var(--border-radius);
@@ -103,7 +104,7 @@
 }
 
 .corners::after {
-  content: "";
+  content: '';
   box-sizing: content-box;
   position: absolute;
   width: var(--border-radius);
