@@ -1,13 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faLightbulb,
-  faBriefcase,
-  faHouse,
-  faMessage,
-  faUser,
-  faCodeBranch,
-  faUserGraduate,
-} from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faMessage, faUser, faCodeBranch, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import styles from '../../styles/Navbar.module.css';
 import { useState } from 'react';
 
