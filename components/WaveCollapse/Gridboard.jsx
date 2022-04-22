@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import GridSquare from './Gridsquare';
 import styles from '../../styles/WaveCollapse.module.css';
 import { tileDefs } from '../../utils/waveCollapse';
+import GridSettings from './GridSettings';
 
 const GridBoard = props => {
   const defaultColor = tileDefs.find(x => x.color == styles.gray);
@@ -9,8 +10,8 @@ const GridBoard = props => {
   const [defaultGrid, setDefaultGrid] = useState([]);
   const [ticking, setTicking] = useState(true);
   const [count, setCount] = useState(0);
-  const [gridSize, setGridSize] = useState(23);
-  const [tileSize, setTileSize] = useState(23);
+  const [gridSize, setGridSize] = useState(20);
+  const [tileSize, setTileSize] = useState(20);
   const colourTile = async () => {
     const tile = grid.filter(x => x.props.color == defaultColor)[0];
     if (!tile) {
@@ -39,19 +40,23 @@ const GridBoard = props => {
     return () => clearTimeout(timer);
   });
   useEffect(async () => {
-    let tiles = [...grid];
-    for (let col = 1; col < gridSize * gridSize; col++) {
+    let tiles = [];
+    for (let col = 0; col < gridSize * gridSize; col++) {
       tiles.push(<GridSquare key={`${col}`} color={defaultColor} />);
     }
     setGrid([...tiles]);
     setDefaultGrid([...tiles]);
-  }, []);
+    setTileSize(483 / gridSize);
+  }, [gridSize]);
   return (
-    <div className={styles.container}>
-      <div className={styles.grid} style={{ ['--cols']: gridSize, ['--tile-size']: `${tileSize}px` }}>
-        {grid}
+    <>
+      <GridSettings setGridSize={setGridSize} gridSize={gridSize} />
+      <div className={styles.container}>
+        <div className={styles.grid} style={{ ['--cols']: gridSize, ['--tile-size']: `${tileSize}px` }}>
+          {grid}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 export default GridBoard;

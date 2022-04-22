@@ -1,13 +1,36 @@
 .container {
-  max-width: 80vh;
+  min-width: 483px;
+  height: 483px;
   display: flex;
   align-self: center;
   margin: 0 auto;
   position: relative;
-  margin-top: 5rem;
+  margin-top: 1rem;
   aspect-ratio: 1 / 1;
   width: max-content;
   background-color: rgb(31, 29, 29);
+}
+
+.formContainer {
+  background-color: darkgray;
+  border-radius: var(--border-radius);
+  width: max-content;
+  padding: 0.6rem;
+  position: relative;
+  color: #000;
+  margin: 0 auto;
+  margin-top: 1rem;
+  transform: translate(-75%, 0);
+}
+.formLabel {
+  padding-right: 1rem;
+  font-weight: 600;
+}
+.formField {
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
 }
 .container .grid {
   display: grid;
