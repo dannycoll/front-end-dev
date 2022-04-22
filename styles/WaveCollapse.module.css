@@ -1,0 +1,43 @@
+.container {
+  max-width: 80vh;
+  display: flex;
+  align-self: center;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 5rem;
+  aspect-ratio: 1 / 1;
+  width: max-content;
+  background-color: rgb(31, 29, 29);
+}
+.container .grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), var(--tile-size));
+  grid-gap: 0;
+  align-self: flex-start;
+}
+
+.cell {
+  border-style: solid;
+  border-width: 0.1px;
+  width: var(--tile-size);
+  height: var(--tile-size);
+}
+
+.lightGreen {
+  background-color: rgb(37, 208, 37);
+}
+.darkGreen {
+  background-color: green;
+}
+.yellow {
+  background-color: yellow;
+}
+.lightBlue {
+  background-color: rgb(0, 157, 255);
+}
+.darkBlue {
+  background-color: blue;
+}
+.gray {
+  background-color: darkgray;
+}
