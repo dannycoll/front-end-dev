@@ -36,7 +36,7 @@ const GridBoard = props => {
     await setGrid([...tiles]);
   };
   useEffect(() => {
-    const timer = setTimeout(async () => ticking && (await colourTile()), 500);
+    const timer = setTimeout(async () => ticking && (await colourTile()), 200);
     return () => clearTimeout(timer);
   });
   useEffect(async () => {
