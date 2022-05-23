@@ -1,15 +1,22 @@
-const MainContent = props => {
+import Home from "../HomeContent/Home";
+import styles from "../../styles/index.module.css";
+
+const MainContent = (props) => {
   const { show } = props;
   switch (show) {
-    case 'home':
-      return <>Home</>;
-    case 'contact':
+    case "home":
+      return (
+        <div className={styles.MainContent}>
+          <Home />
+        </div>
+      );
+    case "contact":
       return <>Contact Me</>;
-    case 'experience':
+    case "experience":
       return <>Experience</>;
-    case 'projects':
+    case "projects":
       return <>Projects</>;
-    case 'about':
+    case "about":
       return <>About</>;
     default:
       return <>Home</>;
