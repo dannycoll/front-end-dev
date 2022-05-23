@@ -80,7 +80,10 @@ const GithubCard = () => {
   return (
     <div className={styles.display}>
       <div className={styles.statsWrapper}>
-        <FontAwesomeIcon icon={faGithub} className={styles.faIconLarge} />
+        <div className={styles.usernameWrapper} style={{ paddingLeft: "2rem" }}>
+          <FontAwesomeIcon icon={faGithub} className={styles.faIconLarge} />{" "}
+          <div className={styles.heading}>GitHub Stats</div>
+        </div>
         <div className={styles.usernameWrapper}>
           <img
             src={profileSrc}
