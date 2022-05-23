@@ -1,32 +1,44 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faMessage, faUser, faCodeBranch, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
-import styles from '../../styles/Navbar.module.css';
-import { useState } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHouse,
+  faMessage,
+  faUser,
+  faCodeBranch,
+  faUserGraduate,
+} from "@fortawesome/free-solid-svg-icons";
+import styles from "../../styles/Navbar.module.css";
+import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { setContent } = props;
   const [indictatorPosition, setIndicatorPosition] = useState(2);
 
-  const handleClick = e => {
+  const handleClick = (e, toShow, pos = 2) => {
+    setContent(toShow);
     let anchor;
-    if (e.target.matches('a')) {
+    if (e.target.matches("a")) {
       anchor = e.target;
     } else {
-      anchor = e.target.closest('a');
+      anchor = e.target.closest("a");
     }
-    if (anchor != null) {
-      const allAnchors = [...document.querySelectorAll('a')];
-      const index = allAnchors.indexOf(anchor);
-      setIndicatorPosition(index);
-    }
+    setIndicatorPosition(pos);
   };
   return (
-    <nav className={styles.navbarContainer} onClick={e => handleClick(e)}>
+    <nav className={styles.navbarContainer}>
       <ul className={styles.list}>
-        <div style={{ '--position': indictatorPosition }} data-indicator className={styles.indicator}>
+        <div
+          style={{ "--position": indictatorPosition }}
+          data-indicator
+          className={styles.indicator}
+        >
           <div className={styles.corners}></div>
         </div>
         <li>
-          <a href="#" onClick={e => handleClick(e)} className={indictatorPosition === 0 ? styles.active : ''}>
+          <a
+            href="#"
+            onClick={(e) => handleClick(e, "about", 0)}
+            className={indictatorPosition === 0 ? styles.active : ""}
+          >
             <div className={styles.icon}>
               <FontAwesomeIcon icon={faUser} />
             </div>
@@ -34,7 +46,11 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#" onClick={e => handleClick(e)} className={indictatorPosition === 1 ? styles.active : ''}>
+          <a
+            href="#"
+            onClick={(e) => handleClick(e, "contact", 1)}
+            className={indictatorPosition === 1 ? styles.active : ""}
+          >
             <div className={styles.icon}>
               <FontAwesomeIcon icon={faMessage} />
             </div>
@@ -42,7 +58,11 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#" className={indictatorPosition === 2 ? styles.active : ''} onClick={e => handleClick(e)}>
+          <a
+            href="#"
+            className={indictatorPosition === 2 ? styles.active : ""}
+            onClick={(e) => handleClick(e, "home", 2)}
+          >
             <div className={styles.icon}>
               <FontAwesomeIcon icon={faHouse} />
             </div>
@@ -50,7 +70,11 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#" onClick={e => handleClick(e)} className={indictatorPosition === 3 ? styles.active : ''}>
+          <a
+            href="#"
+            onClick={(e) => handleClick(e, "experience", 3)}
+            className={indictatorPosition === 3 ? styles.active : ""}
+          >
             <div className={styles.icon}>
               <FontAwesomeIcon icon={faUserGraduate} />
             </div>
@@ -58,13 +82,15 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#" onClick={e => handleClick(e)} className={indictatorPosition === 4 ? styles.active : ''}>
+          <a
+            href="#"
+            onClick={(e) => handleClick(e, "projects", 4)}
+            className={indictatorPosition === 4 ? styles.active : ""}
+          >
             <div className={styles.icon}>
               <FontAwesomeIcon icon={faCodeBranch} />
             </div>
-            <div className={styles.text} onClick={e => handleClick(e)}>
-              Projects
-            </div>
+            <div className={styles.text}>Projects</div>
           </a>
         </li>
       </ul>
