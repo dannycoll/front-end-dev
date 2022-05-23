@@ -1,0 +1,69 @@
+.usernameWrapper {
+  display: flex;
+  padding-bottom: 1rem;
+  max-width: fit-content;
+}
+.heading {
+  position: relative;
+  margin: 0 auto;
+  font-weight: bolder;
+  padding: 1rem;
+}
+
+.display {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.statsWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-left: 5rem;
+}
+.chartWrapper {
+  max-width: 50%;
+  aspect-ratio: 1/1;
+}
+.avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+}
+
+.repoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.repoList li {
+  display: flex;
+}
+
+.labels {
+  font-weight: bolder;
+  padding: 1rem;
+  padding-left: 0;
+}
+
+.infoWrapper {
+  padding: 0.2rem;
+  padding-left: 0;
+}
+
+.ghLinks {
+  padding: 0.1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.faIcon {
+  padding: 0.2rem;
+  padding-left: 0;
+}

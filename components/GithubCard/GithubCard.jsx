@@ -1,4 +1,4 @@
-import styles from "../../styles/index.module.css";
+import styles from "../../styles/githubCard.module.css";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
