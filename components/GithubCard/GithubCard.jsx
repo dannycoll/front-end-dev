@@ -50,7 +50,7 @@ const GithubCard = () => {
     recentRepos = recentRepos.filter((item, pos) => recentRepos.map(x => x.name).indexOf(item.name) == pos);
     setRecentRepos([...recentRepos]);
 
-    const reposFetched = await (await fetch('https://api.github.com/users/dannycoll/repos')).json();
+    let reposFetched = await (await fetch('https://api.github.com/users/dannycoll/repos')).json();
     reposFetched = reposFetched.map(x => ({
       name: x.name,
       lang: x.language,
