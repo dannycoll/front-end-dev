@@ -2,6 +2,7 @@ import styles from "../../styles/githubCard.module.css";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { Doughnut } from "react-chartjs-2";
 
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
@@ -79,6 +80,7 @@ const GithubCard = () => {
   return (
     <div className={styles.display}>
       <div className={styles.statsWrapper}>
+        <FontAwesomeIcon icon={faGithub} className={styles.faIconLarge} />
         <div className={styles.usernameWrapper}>
           <img
             src={profileSrc}
