@@ -5,12 +5,13 @@
   min-width: 50vw;
   max-height: 80vh;
   min-height: 50vh;
-  margin: 0 auto;
+  margin: 0 0;
   padding: 1rem;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 30%);
   border-radius: 1rem;
   color: #000;
   display: flex;
+  align-self: center;
 }

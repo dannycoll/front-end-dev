@@ -13,7 +13,7 @@ const Navbar = (props) => {
   const { setContent } = props;
   const [indictatorPosition, setIndicatorPosition] = useState(2);
 
-  const handleClick = (e, toShow) => {
+  const handleClick = (e, toShow, pos = 2) => {
     setContent(toShow);
     let anchor;
     if (e.target.matches("a")) {
@@ -21,11 +21,7 @@ const Navbar = (props) => {
     } else {
       anchor = e.target.closest("a");
     }
-    if (anchor != null) {
-      const allAnchors = [...document.querySelectorAll("a")];
-      const index = allAnchors.indexOf(anchor);
-      setIndicatorPosition(index);
-    }
+    setIndicatorPosition(pos);
   };
   return (
     <nav className={styles.navbarContainer}>
@@ -40,7 +36,7 @@ const Navbar = (props) => {
         <li>
           <a
             href="#"
-            onClick={(e) => handleClick(e, "about")}
+            onClick={(e) => handleClick(e, "about", 0)}
             className={indictatorPosition === 0 ? styles.active : ""}
           >
             <div className={styles.icon}>
@@ -52,7 +48,7 @@ const Navbar = (props) => {
         <li>
           <a
             href="#"
-            onClick={(e) => handleClick(e, "contact")}
+            onClick={(e) => handleClick(e, "contact", 1)}
             className={indictatorPosition === 1 ? styles.active : ""}
           >
             <div className={styles.icon}>
@@ -65,7 +61,7 @@ const Navbar = (props) => {
           <a
             href="#"
             className={indictatorPosition === 2 ? styles.active : ""}
-            onClick={(e) => handleClick(e, "home")}
+            onClick={(e) => handleClick(e, "home", 2)}
           >
             <div className={styles.icon}>
               <FontAwesomeIcon icon={faHouse} />
@@ -76,7 +72,7 @@ const Navbar = (props) => {
         <li>
           <a
             href="#"
-            onClick={(e) => handleClick(e, "experience")}
+            onClick={(e) => handleClick(e, "experience", 3)}
             className={indictatorPosition === 3 ? styles.active : ""}
           >
             <div className={styles.icon}>
@@ -88,7 +84,7 @@ const Navbar = (props) => {
         <li>
           <a
             href="#"
-            onClick={(e) => handleClick(e, "projects")}
+            onClick={(e) => handleClick(e, "projects", 4)}
             className={indictatorPosition === 4 ? styles.active : ""}
           >
             <div className={styles.icon}>

@@ -50,7 +50,6 @@ const GithubCard = () => {
         url: `https://github.com/${x.repo.name}`,
       })),
     ];
-    console.log(fetched);
     recentRepos = recentRepos.filter(
       (item, pos) => recentRepos.map((x) => x.name).indexOf(item.name) == pos
     );
@@ -124,7 +123,9 @@ const GithubCard = () => {
           </div>
         </div>
       </div>
-      <div>{chartData.labels.length > 0 && <Doughnut data={chartData} />}</div>
+      <div className={styles.chartWrapper}>
+        {chartData.labels.length > 0 && <Doughnut data={chartData} />}
+      </div>
     </div>
   );
 };
