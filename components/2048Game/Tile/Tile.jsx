@@ -3,7 +3,14 @@ import React, { useEffect, useState } from 'react';
 import invariant from 'tiny-invariant';
 import { usePreviousProps } from '../../../customHooks/usePreviousProps';
 import { useBoard } from '../Board';
+import PropTypes from 'prop-types';
 
+Tile.propTypes = {
+  value: PropTypes.number.isRequired,
+  position: PropTypes.arrayOf(PropTypes.number).isRequired,
+  color: PropTypes.string,
+  zIndex: PropTypes.number,
+};
 export const Tile = ({ value, position, zIndex }) => {
   const [containerWidth, tileCount] = useBoard();
   const [scale, setScale] = useState(1);

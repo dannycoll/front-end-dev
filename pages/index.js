@@ -1,13 +1,13 @@
-import Navbar from "../components/Navbar/Navbar";
-import Particles from "react-tsparticles";
-import options from "../utils/particleOptions";
-import MainContent from "../components/MainContent/MainContent";
-import { useState } from "react";
-import styles from "../styles/index.module.css";
-import GridBoard from '../components/WaveCollapse/Gridboard';
+import React from 'react';
+import Navbar from '../components/Navbar/Navbar';
+import Particles from 'react-tsparticles';
+import options from '../utils/particleOptions';
+import MainContent from '../components/MainContent/MainContent';
+import { useState } from 'react';
+import styles from '../styles/index.module.css';
 
 export default function Home() {
-  const [toShow, setToShow] = useState("home");
+  const [toShow, setToShow] = useState('home');
 
   const particleOptions = {
     ...options,

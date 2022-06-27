@@ -1,5 +1,12 @@
 import React from 'react';
 import { tileCount as defaultTileCount } from './index';
+import PropTypes from 'prop-types';
+
+BoardProvider.propTypes = {
+  tileCount: PropTypes.number,
+  children: PropTypes.node.isRequired,
+  containerWidth: PropTypes.number,
+};
 
 export const BoardContext = React.createContext({
   containerWidth: 0,

@@ -1,4 +1,5 @@
-import GithubCard from "../GithubCard/GithubCard";
+import React from 'react';
+import GithubCard from '../GithubCard/GithubCard';
 
 const Home = () => {
   return (

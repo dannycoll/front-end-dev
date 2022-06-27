@@ -1,6 +1,12 @@
+import React from 'react';
 import Home from '../HomeContent/Home';
 import styles from '../../styles/index.module.css';
 import Experience from '../ExperienceContent/Experience';
+import PropTypes from 'prop-types';
+
+MainContent.propTypes = {
+  show: PropTypes.string.isRequired,
+};
 
 const MainContent = props => {
   const { show } = props;

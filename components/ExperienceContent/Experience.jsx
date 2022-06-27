@@ -1,3 +1,4 @@
+import React from 'react';
 import GithubCard from '../GithubCard/GithubCard';
 
 const Experience = () => {
