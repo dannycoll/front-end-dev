@@ -1,0 +1,15 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #bbada0;
+  border: var(--pixel-size) solid #bbada0;
+  border-radius: calc(var(--pixel-size) * 0.75);
+}
+
+.gridCell {
+  width: calc(var(--pixel-size) * 12.5);
+  height: calc(var(--pixel-size) * 12.5);
+  margin: calc(var(--pixel-size) * 1);
+  border-radius: calc(var(--pixel-size) * 0.5);
+  background: rgba(238, 228, 218, 0.35);
+}

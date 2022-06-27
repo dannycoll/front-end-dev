@@ -24,8 +24,10 @@
     "react-github-stats-card-v2": "^1.2.0",
     "react-slider": "^2.0.0",
     "react-tsparticles": "^1.43.1",
+    "tiny-invariant": "^1.2.0",
     "tsparticles": "^1.43.1",
     "tsparticles-engine": "^2.0.0-beta.0",
+    "use-debounce": "^8.0.1",
     "web-animation-club": "^0.6.0"
   },
   "devDependencies": {
