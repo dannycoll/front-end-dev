@@ -1,0 +1,9 @@
+.button {
+  background: #8f7a66;
+  border: var(--pixel-size) solid #8f7a66;
+  border-radius: calc(var(--pixel-size) * 0.5);
+  font-size: calc(var(--pixel-size) * 2);
+  line-height: calc(var(--pixel-size) * 3);
+  font-weight: bold;
+  color: #f9f6f2;
+}

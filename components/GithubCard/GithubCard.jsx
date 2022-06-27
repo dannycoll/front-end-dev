@@ -1,5 +1,5 @@
 import styles from '../../styles/githubCard.module.css';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -22,11 +22,18 @@ const GithubCard = () => {
         label: 'Languages Used',
         data: [],
         backgroundColor: [
-          'rgb(255, 99, 132)',
-          'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)',
-          'rgb(255, 0, 0)',
-          'rgb(0, 204, 0)',
+          `rgb(${Math.random() * 256},${Math.random() * 256},${Math.random() * 256})`,
+          `rgb(${Math.random() * 256},${Math.random() * 256},${Math.random() * 256})`,
+          `rgb(${Math.random() * 256},${Math.random() * 256},${Math.random() * 256})`,
+          `rgb(${Math.random() * 256},${Math.random() * 256},${Math.random() * 256})`,
+          `rgb(${Math.random() * 256},${Math.random() * 256},${Math.random() * 256})`,
+          `rgb(${Math.random() * 256},${Math.random() * 256},${Math.random() * 256})`,
+          `rgb(${Math.random() * 256},${Math.random() * 256},${Math.random() * 256})`,
+          `rgb(${Math.random() * 256},${Math.random() * 256},${Math.random() * 256})`,
+          `rgb(${Math.random() * 256},${Math.random() * 256},${Math.random() * 256})`,
+          `rgb(${Math.random() * 256},${Math.random() * 256},${Math.random() * 256})`,
+          `rgb(${Math.random() * 256},${Math.random() * 256},${Math.random() * 256})`,
+          `rgb(${Math.random() * 256},${Math.random() * 256},${Math.random() * 256})`,
         ],
         hoverOffset: 4,
       },
@@ -95,7 +102,7 @@ const GithubCard = () => {
             </div>
             <ul className={styles.repoList}>
               {recentRepos.map(x => (
-                <li>
+                <li key={x.name}>
                   <a href={x.url} className={styles.ghLinks}>
                     <FontAwesomeIcon icon={faExternalLinkAlt} className={styles.faIcon} />
                     {x.name}

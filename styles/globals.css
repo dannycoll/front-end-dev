@@ -4,6 +4,7 @@
   --border-radius: calc(var(--icon-size) / 4);
   --nav-item-padding: calc(var(--icon-size) / 2);
   --background-color: #333;
+  --pixel-size: 8px;
 }
 
 html,

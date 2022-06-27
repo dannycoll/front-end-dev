@@ -4,12 +4,11 @@ import styles from '../../styles/WaveCollapse.module.css';
 import { tileDefs } from '../../utils/waveCollapse';
 import GridSettings from './GridSettings';
 
-const GridBoard = props => {
+const GridBoard = () => {
   const defaultColor = tileDefs.find(x => x.color == styles.gray);
-  const [grid, setGrid] = useState([<GridSquare key={`0`} color={defaultColor} />]);
+  const [grid, setGrid] = useState([<GridSquare key={'0'} color={defaultColor} />]);
   const [defaultGrid, setDefaultGrid] = useState([]);
-  const [ticking, setTicking] = useState(true);
-  const [count, setCount] = useState(0);
+  const ticking = true;
   const [gridSize, setGridSize] = useState(20);
   const [tileSize, setTileSize] = useState(20);
   const colourTile = async () => {

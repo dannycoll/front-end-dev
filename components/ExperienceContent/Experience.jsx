@@ -1,7 +1,7 @@
 import React from 'react';
 import GithubCard from '../GithubCard/GithubCard';
 
-const Home = () => {
+const Experience = () => {
   return (
     <>
       <GithubCard />
@@ -9,4 +9,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Experience;
