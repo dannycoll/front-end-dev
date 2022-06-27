@@ -1,6 +1,5 @@
 import React from 'react';
 import { BoardProvider } from './BoardContext';
-import { boardMargin, tileCount as defaultTileCount } from './models';
 import { Grid } from '../Grid';
 import { tileTotalWidth, Tile } from '../Tile';
 import styles from '../../../styles/2048/board.module.css';
@@ -10,7 +9,10 @@ Board.propTypes = {
   tileCountPerRow: PropTypes.number,
   tiles: PropTypes.arrayOf(Tile).isRequired,
 };
-export const Board = ({ tiles, tileCountPerRow = defaultTileCount }) => {
+export const Board = ({ tiles, tileCountPerRow = 4 }) => {
+  const pixelSize = 8;
+
+  const boardMargin = 2 * pixelSize;
   const containerWidth = tileTotalWidth * tileCountPerRow;
   const boardWidth = containerWidth + boardMargin;
 
