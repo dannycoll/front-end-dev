@@ -1,4 +1,4 @@
-import styles from '../../../styles/2048/Tile.module.css';
+import styles from '../../../styles/2048/tile.module.css';
 import React, { useEffect, useState } from 'react';
 import invariant from 'tiny-invariant';
 import { usePreviousProps } from '../../../customHooks/usePreviousProps';

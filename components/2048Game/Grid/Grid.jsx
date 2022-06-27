@@ -1,4 +1,4 @@
-import styles from '../../../styles/2048/Grid.module.css';
+import styles from '../../../styles/2048/grid.module.css';
 import React from 'react';
 import { useBoard } from '../Board';
 

@@ -3,7 +3,7 @@ import { BoardProvider } from './BoardContext';
 import { boardMargin, tileCount as defaultTileCount } from './models';
 import { Grid } from '../Grid';
 import { tileTotalWidth, Tile } from '../Tile';
-import styles from '../../../styles/2048/Board.module.css';
+import styles from '../../../styles/2048/board.module.css';
 import PropTypes from 'prop-types';
 
 Board.propTypes = {

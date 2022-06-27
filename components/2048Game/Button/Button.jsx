@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../../styles/2048/Button.module.css';
+import styles from '../../../styles/2048/button.module.css';
 import PropTypes from 'prop-types';
 
 Button.propTypes = {
