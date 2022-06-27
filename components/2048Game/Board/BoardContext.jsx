@@ -1,5 +1,5 @@
 import React from 'react';
-import { tileCount as defaultTileCount } from './index';
+import { tileCount as defaultTileCount } from './models';
 import PropTypes from 'prop-types';
 
 BoardProvider.propTypes = {
